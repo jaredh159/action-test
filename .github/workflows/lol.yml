@@ -12,9 +12,9 @@ jobs:
     name: lol
     runs-on: ubuntu-latest
     outputs:
-      should_deploy_site: ${{ steps.should-deploy.should_deploy_site }}
+      should_deploy_site: ${{ steps.should_deploy.should_deploy_site }}
     steps:
-      - name: should-deploy
+      - name: should_deploy
         uses: friends-library/friends-library/actions/should-deploy@actions-should-deploy
         with:
           SITE_ID: site
