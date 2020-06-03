@@ -9,7 +9,7 @@ on:
 
 jobs:
   lol:
-    name: run-lint-adoc
+    name: lol
     runs-on: ubuntu-latest
     steps:
       - name: test-action
@@ -17,5 +17,12 @@ jobs:
         with:
           SITE_ID: site
           GITHUB_TOKEN: ${{ github.token }}
+
+  later:
+    name: test-it
+    runs-on: ubuntu-latest
+    needs: lol
+    if: env.DEPLOY_SITE
+    steps:
       - name: debug
-        run: echo $DEPLOY_SITE; echo foobar
+        run: echo deploy it here son
