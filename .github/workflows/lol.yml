@@ -15,7 +15,7 @@ jobs:
       should_deploy_site: ${{ steps.should_deploy.should_deploy_site }}
     steps:
       - name: should_deploy
-        uses: friends-library/friends-library/actions/should-deploy@actions-should-deploy
+        uses: friends-library/friends-library/actions/should-deploy@7e0937e2
         with:
           SITE_ID: site
           GITHUB_TOKEN: ${{ github.token }}
