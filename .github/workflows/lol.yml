@@ -12,7 +12,7 @@ jobs:
     name: lol
     runs-on: ubuntu-latest
     outputs:
-      should_deploy_site: ${{ steps.should_deploy.should_deploy_site }}
+      should_deploy_site: ${{ steps.should_deploy.outputs.should_deploy_site }}
     steps:
       - name: should_deploy
         id: should_deploy
