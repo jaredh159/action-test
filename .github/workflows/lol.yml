@@ -6,8 +6,6 @@ on:
       - master
   pull_request:
     types: [opened, synchronize]
-    branches-ignore:
-      - master
 
 jobs:
   lol:
