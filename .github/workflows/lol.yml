@@ -1,0 +1,20 @@
+name: lol
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize]
+    branches-ignore:
+      - master
+
+jobs:
+  lol:
+    name: run-lint-adoc
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-action
+        uses: friends-library/friends-library/actions/should-deploy@actions-should-deploy
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
