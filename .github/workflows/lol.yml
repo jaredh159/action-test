@@ -22,7 +22,7 @@ jobs:
     name: test-it
     runs-on: ubuntu-latest
     needs: lol
-    if: env.DEPLOY_SITE
+    if: $DEPLOY_SITE
     steps:
       - name: debug
         run: echo deploy it here son
