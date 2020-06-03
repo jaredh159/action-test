@@ -24,7 +24,7 @@ jobs:
     name: test-it
     runs-on: ubuntu-latest
     needs: lol
-    if: needs.lol.outputs.should_deploy_site == true
+    if: needs.lol.outputs.should_deploy_site == 'true'
     steps:
       - name: debug
         run: echo deploy it here son
