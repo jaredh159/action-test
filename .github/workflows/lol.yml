@@ -15,4 +15,7 @@ jobs:
       - name: test-action
         uses: friends-library/friends-library/actions/should-deploy@actions-should-deploy
         with:
+          SITE_ID: site
           GITHUB_TOKEN: ${{ github.token }}
+      - name: debug
+        run: echo $DEPLOY_SITE; echo foobar
