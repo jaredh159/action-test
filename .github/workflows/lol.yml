@@ -28,3 +28,11 @@ jobs:
     steps:
       - name: debug
         run: echo deploy it here son
+
+  foobar:
+    name: test-it2
+    runs-on: ubuntu-latest
+    needs: lol
+    steps:
+      - name: debug
+        run: echo ${{ needs.lol.outputs.should_deploy_site }}
