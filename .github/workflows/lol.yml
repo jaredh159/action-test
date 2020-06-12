@@ -1,4 +1,4 @@
-name: lol
+name: deploy-site
 
 on:
   push:
@@ -8,11 +8,9 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  lol:
-    name: run-lint-adoc
+  debug:
+    name: debug
     runs-on: ubuntu-latest
     steps:
-      - name: test-action
-        uses: friends-library/friends-library/actions/should-deploy@actions-should-deploy
-        with:
-          GITHUB_TOKEN: ${{ github.token }}
+      - name: debug
+        run: echo $GITHUB_REF
