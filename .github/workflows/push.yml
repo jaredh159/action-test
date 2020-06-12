@@ -10,17 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-        # with:
-        # persist-credentials: false
-        # fetch-depth: 0
       - name: Create local changes
         run: |
-          echo rofl > foo.txt
-          echo copter > bar.txt
+          echo me > foo.txt
+          echo jared > bar.txt
+          echo jared > jared.txt
       - name: Commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "jared@netrivet.com"
+          git config --local user.name "Jared Henderson"
           git add .
           git commit -m "my commit message"
       - name: Push changes
